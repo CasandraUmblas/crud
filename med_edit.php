@@ -46,12 +46,12 @@ if(isset($_POST['submit'])) {
 
     <div class="container">
         <div class="text-center mb-4">
-            <h3>Update Medicine's Information</h3>
+            <h3>Update Medicine Information</h3>
             <p class="text-muted">Click update after changing</p>
     </div>
     
     <?php
-        $sql = "SELECT * FROM `medicine` WHERE id = $ID LIMIT 1";
+        $sql = "SELECT * FROM `medicine` WHERE ID = $ID LIMIT 1";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
     ?>
@@ -81,7 +81,7 @@ if(isset($_POST['submit'])) {
 
                 <div>
                     <button type="submit" class="btn btn-success" name="submit">Update</button>
-                    <a href="med_index.php" class="btn btn-danger">Cancel</a>
+                    <a href="pH_menu.php" class="btn btn-danger">Cancel</a>
                 </div>
             </div>
         </form>

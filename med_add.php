@@ -12,7 +12,7 @@ if(isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if($result) {
-        header("Location: ex_index.php?msg=Added successfully");
+        header("Location: med_index.php?msg=Added successfully");
     }
     else {
         echo "Failed: " . mysqli_error($conn);
@@ -54,28 +54,28 @@ if(isset($_POST['submit'])) {
                 <div class="row">
                     <div class="col mb-3">
                         <input type="text" class="form-control" name="Medicine"
-                        placeholder="Medicine">
+                        placeholder="Medicine" id="Name" required>
                     </div>
                 </div>
 
             <div class="mb-3">
                 <input type="text" class="form-control" name="Direction"
-                placeholder="Direction">
+                placeholder="Direction" id="Direction" required>
             </div>
 
             <div class="mb-3">
                 <input type="text" class="form-control" name="Indication"
-                placeholder="Indication">
+                placeholder="Indication" id="Indication" required>
             </div> 
 
             <div class="mb-3">
                 <input type="text" class="form-control" name="Side_effects"
-                placeholder="Side Effects">
+                placeholder="Side Effects" id="Side_effects" required>
             </div>
 
                 <div>
                     <button type="submit" class="btn btn-success" name="submit">Save</button>
-                    <a href="ph_index.php" class="btn btn-danger">Back</a>
+                    <a href="ph_menu.php" class="btn btn-danger">Back</a>
                 </div>
             </form>
         </div>

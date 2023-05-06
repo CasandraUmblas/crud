@@ -1,7 +1,7 @@
 <?php
 include "db_conn.php";
 $ID = $_GET['id'];
-$sql = "DELETE FROM `crud` WHERE ID =$ID";
+$sql = "DELETE FROM `patients` WHERE ID =$ID";
 $result = mysqli_query($conn, $sql);
 if($result) {
     header("Location: p_index.php?msg=Deleted Successfully");

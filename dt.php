@@ -3,16 +3,14 @@ include "db_conn.php";
 
 if(isset($_POST['submit'])) {
     $Name = $_POST['Name'];
-    $Age = $_POST['Age'];
-    $Sex = $_POST['Sex'];
-    $Ailment = $_POST['Ailment'];
+    $Date_Time = $_POST['Date_Time'];
     
-    $sql = "INSERT INTO `patients`(`ID`, `Name`, `Age`, `Sex`, `Ailment`) VALUES (NULL,'$Name','$Age','$Sex','$Ailment')";
+    $sql = "INSERT INTO `date_time`(`Name`, `Date_Time`) VALUES ('$Name','$Date_Time')";
     
     $result = mysqli_query($conn, $sql);
 
     if($result) {
-        header("Location: p_index.php?msg=Added successfully");
+        header("Location: dt_index.php?msg=Added successfully");
     }
     else {
         echo "Failed: " . mysqli_error($conn);
@@ -35,20 +33,15 @@ if(isset($_POST['submit'])) {
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <title>Pharmacy Management System</title>
+    <title>Biotech Pharmacy</title>
 </head>
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5"
         style="background-color: #5F9EA0;">
-            Pharmacy Management System
+            Biotech Pharmacy
     </nav>
 
     <div class="container">
-        <div class="text-center mb-4">
-            <h3>Add Patient</h3>
-            <p class="text-muted">Complete the form below</p>
-        </div>
-    
         <div class="container d-flex justify-content-center">
             <form action="" method="post" style="width:50vw; min-width: 300px;">
                 <div class="row">
@@ -60,27 +53,10 @@ if(isset($_POST['submit'])) {
                 </div>
 
             <div class="mb-3">
-                <label class="form-label">Age:</label>
-                <input type="text" class="form-control" name="Age"
-                placeholder="Enter your age">
+                <label class="form-label">Date and Time:</label>
+                <input type="datetime-local" name="Date_Time" class="form-control"
+                placeholder="Date and Time">
             </div>
-
-            <div class="mb-3">
-                <label class="form-label">Ailment:</label>
-                <input type="text" class="form-control" name="Ailment"
-                placeholder="Enter your ailment">
-            </div>
-
-            <div class="form-group mb-3">
-                <label>Sex:</label> &nbsp;
-                <input type="radio" class="form-check-input" name="Sex"
-                id="Male" value="Male">
-                <label for="Male" class="form-input-label">Male</label>
-                &nbsp;
-                <input type="radio" class="form-check-input" name="Sex"
-                id="Female" value="Female">
-                <label for="Female" class="form-input-label">Female</label>
-            </div> 
 
                 <div>
                     <button type="submit" class="btn btn-success" name="submit">Save</button>

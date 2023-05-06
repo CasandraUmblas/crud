@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" contents="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
@@ -23,14 +24,13 @@
                     <h3>Patient Menu</h3>
                 </div>
                 <a href="p_add.php" class="btn btn-dark mb-3">Create an account</a>
-                <a href="med_search.php" class="btn btn-dark mb-3">Search medicine</a>
-                <a href="med_update.php" class="btn btn-dark mb-3">Update/Monitor</a>
-                <a href="med_update.php" class="btn btn-dark mb-3">Delete</a>
+                <a href="pmed_search.php" class="btn btn-dark mb-3">Search medicine</a>
+                <a href="dt.php" class="btn btn-dark mb-3">Update/Monitor</a>
             </div>
 
             <div>
-                    <a href="" class="btn btn-danger">Back</a>
-                </div>
+                <a href="" class="btn btn-danger">Back</a>
+            </div>
 
             </form>
         </div>

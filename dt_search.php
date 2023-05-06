@@ -20,15 +20,6 @@
     </nav>
 
     <div class="container">
-            <?php
-            if(isset($_GET['msg'])) {
-                $msg = $_GET['msg'];
-                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-               '.$msg.'
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>';
-            }
-            ?>
             <a href="p_add.php" class="btn btn-dark mb-3">Add Patient</a>
             <a href="p_menu.php" class="btn btn-dark mb-3">Exit</a>
             
@@ -37,30 +28,23 @@
                     <tr>
                         <th scope="col">Patient's ID</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Sex</th>
-                        <th scope="col">Ailment</th>
-                        <th scope="col">Options</th>
+                        <th scope="col">Date and Time</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     include "db_conn.php";
+                    if(isset($_POST['submit'])) 
+                        $search=$_POST['search'];
 
-                        $sql = "SELECT * FROM `patients`";
+                        $sql = "SELECT * FROM `date_time` WHERE Medicine=$search";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($result)) {
                             ?>
                             <tr>
                                 <td><?php echo $row['ID'] ?></td>
-                                <td><?php echo $row['Name'] ?></td>
-                                <td><?php echo $row['Age'] ?></td>
-                                <td><?php echo $row['Sex'] ?></td>
-                                <td><?php echo $row['Ailment'] ?></td>
-                                <td>
-                                    <a href="p_edit.php?id=<?php echo $row['ID'] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                                    <a href="p_delete.php?id=<?php echo $row['ID'] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
-                                </td>
+                                <td><?php echo $row['Medicine'] ?></td>
+                                <td><?php echo $row['Date_Time'] ?></td>
                             </tr>
                             <?php
                         }

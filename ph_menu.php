@@ -18,13 +18,18 @@
     <div class="container">
         <div class="box form-box">
             <form action="" method="post">
-            <div class="field input mb-3 col-6 mx-auto">
+            <div class="field input mb-3 col-8 mx-auto">
+                <div class="text-center mb-4">
+                    <h3>Pharmacist Menu</h3>
+                </div>
                 <a href="med_add.php" class="btn btn-dark mb-3">Add Medicine</a>
-                <a href="med_search.php" class="btn btn-dark mb-3">Search Medicine</a>
-                <a href="med_update.php" class="btn btn-dark mb-3">Update Medicine</a>
-                <a href="" class="btn btn-dark mb-3">Exit</a>
+                <a href="phmed_search.php" class="btn btn-dark mb-3">Search Medicine</a>
             </div>
 
+            <div>
+                <a href="home.php" class="btn btn-danger">Back</a>
+            </div>
+            
             </form>
         </div>
     </div>
