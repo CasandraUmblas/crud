@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand">Biotech Pharmacy</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

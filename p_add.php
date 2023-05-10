@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -45,6 +45,9 @@ if(isset($_POST['submit'])) {
 
     <div class="container">
         <div class="text-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
             <h3>Add Patient</h3>
             <p class="text-muted">Complete the form below</p>
         </div>
@@ -84,7 +87,7 @@ if(isset($_POST['submit'])) {
 
                 <div>
                     <button type="submit" class="btn btn-success" name="submit">Save</button>
-                    <a href="p_menu.php" class="btn btn-danger">Cancel</a>
+                    <a href="p_menu.php" class="bi-chevron-compact-left btn btn-danger">Cancel</a>
                 </div>
             </form>
         </div>

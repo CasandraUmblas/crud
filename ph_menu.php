@@ -11,14 +11,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <div class="container">
         <div class="box form-box">
             <form action="" method="post">
-            <div class="field input mb-3 col-8 mx-auto">
+            <div class="field input mb-3 col-6 mx-auto">
                 <div class="text-center mb-4">
                     <h3>Pharmacist Menu</h3>
                 </div>
@@ -27,7 +27,7 @@
             </div>
 
             <div>
-                <a href="home.php" class="btn btn-danger">Back</a>
+                <a href="#.php" class="btn btn-danger">Back</a>
             </div>
             
             </form>

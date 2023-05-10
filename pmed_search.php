@@ -19,7 +19,7 @@ include 'db_conn.php';
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5"
         style="background-color: #5F9EA0;">
-         Pharmacy Management System
+         Biotech Pharmacy
     </nav>
 
     <div class="container my-5">
