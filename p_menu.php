@@ -25,12 +25,11 @@
                     </div>
                     <a href="p_add.php" class="btn btn-dark mb-3">Add Record</a>
                     <a href="pmed_search.php" class="btn btn-dark mb-3">Search medicine</a>
-                    <a href="dt_index.php" class="btn btn-dark mb-3">Update/Monitor</a>
-                    <a href="dt_monitor.php" class="btn btn-dark mb-3">View History</a>
+                    <a href="dt_index.php" class="btn btn-dark mb-3">Monitor</a>
                 </div>
 
                 <div>
-                    <a href="" class="btn btn-danger">Back</a>
+                    <a href="home_menu.php" class="btn btn-danger">Back</a>
                 </div>
 
                 </form>

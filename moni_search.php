@@ -19,14 +19,14 @@ include 'db_conn.php';
 <body>
     <nav class="navbar navbar-light justify-content-center fs-3 mb-5"
         style="background-color: #5F9EA0;">
-         Pharmacy Management System
+         Biotech Pharmacy
     </nav>
 
     <div class="container my-5">
         <form method="post">
-            <input type="text" placeholder="Search a medicine" name="search">
+            <input type="text" placeholder="Search patient's name" name="search">
             <button class="btn btn-dark btn-sm" name="submit">Search</button>
-            <a href="ph_menu.php" class="btn btn-danger">Back</a>
+            <a href="ph_menu.php" class="btn btn-dark btn-sm">Back</a>
         </form>
         <div class="container my-5">
             <table class="table table-hover text-center">
@@ -34,32 +34,28 @@ include 'db_conn.php';
                 if(isset($_POST['submit'])) {
                     $search=$_POST['search'];
 
-                    $sql="SELECT * FROM `medicine` WHERE Medicine='$search'";
+                    $sql="SELECT * FROM `date_time` WHERE name LIKE '$search'";
                     $result=mysqli_query($conn, $sql);
                     if($result) {
                         if(mysqli_num_rows($result)>0) {
                             echo '
                             <thead>
                             <tr>
-                            <th>Medicine</th>
-                            <th>Direction</th>
-                            <th>Indication</th>
-                            <th>Side Effects</th>
+                            <th>Name</th>
+                            <th>Monitored Date and Time</th>
                             </thead>
                             ';
-                            $row=mysqli_fetch_assoc($result);
+                            while ($row=mysqli_fetch_assoc($result)) {;
                             echo '<tbody>
                             <tr>
-                            <td> '.$row['Medicine'].' </td>
-                            <td> '.$row['Direction'].' </td>
-                            <td> '.$row['Indication'].' </td>
-                            <td> '.$row['Side_effects'].' </td>
+                            <td> '.$row['name'].' </td>
+                            <td> '.$row['date_time'].' </td>
                             </tr>
                             </tbody>
                             ';
-
+                            }
                         } else {
-                            echo '<h6>Medicine not found</h6>';
+                            echo '<h6>Record Not Found</h6>';
                         }
                     }
                 }
