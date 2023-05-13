@@ -17,7 +17,7 @@
                 <li><a href="abt_us.html">About us</a></li>
                 <li><a href="cont_us.html">Contact us</a></li>
             </ul>
-                <a href="p_login.php" class="btn">Get Started</a>
+                <a href="home_menu.php" class="btn">Get Started</a>
          </nav>
         </div>
 
