@@ -1,45 +1,25 @@
-<!doctype html>
-<html>
-<head>
-	<title>BIOTECH PHARMACY</title>
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-</head>
-<body>
-	<header>
-		<div class="main">
-			<div class="logo">
-				<img src="LOGO.png">
-			<ul> 
-				<li> <a href="home.php"> Home </a> </li>
-				<li> <a href="cont_us.php"> Contact </a> </li>
-			</ul>
-			</div>
-		</div>
-		
-		<div class="title">
-			<h1>BIOTECH PHARMACY</h1>
-		</div>
-	</header>
-</body>
-</html>
-
 <!DOCTYPE html>
-
 <html>
-	<head>
-		<title> BIOTECH PHARMACY</title>
-	</head>
-	<body>
-		<a href="https://www.google.com">
-			<button onclick="doSomething()" style="background-color:A0D8B3;color:#263A29;border-radius:5px">click me!</button>
-		</a>
+    <head>
+        <title>menu</title>
+        <link rel="stylesheet" type="text/css" href="css/home.css">
 
-		<p id="test">Hello</p>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin:ital,wght@0,100;0,300,0,400;0,500;0,700;,1,100;
+        1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body> 
+        <div class="home">
+          <nav>
+            <h2 class="logo">BIOTECH PHARMACY</h2>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="abt_us.html">About us</a></li>
+                <li><a href="cont_us.html">Contact us</a></li>
+            </ul>
+                <a href="p_login.php" class="btn">Get Started</a>
+         </nav>
+        </div>
 
-		<script>
-			function doSomething(){
-			document.getElementById("test").innerHTML = "Goodbye";
-			}
-		</script>
-	</body>
+</body>   
 </html>
